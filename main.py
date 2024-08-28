@@ -81,5 +81,24 @@ empresas_resultantes_acima = set(acima_media_centralidade.keys()) & set(
 print('Quantidade empresas na intersecção: ',
       len((empresas_resultantes_acima)))
 
-for e in empresas_resultantes_acima:
-    print(e)
+contratos_por_empresa = {}
+for n1, n2 in G.edges():
+    fornecedor = n1 if n1 in empresas else n2
+
+    if fornecedor not in contratos_por_empresa:
+        contratos_por_empresa[fornecedor] = 0
+    contratos_por_empresa[fornecedor] += 1
+
+# Ordenar pelo número de contratos, do maior para o menor
+contratos_ordenados = sorted(
+    contratos_por_empresa.items(), key=lambda x: x[1], reverse=True)
+
+# Exibir resultados
+cont = 0
+print("\nEmpresas com mais contratos:")
+for fornecedor, quantidade in contratos_ordenados:
+    if quantidade > 1:
+        cont += 1
+    print(
+        f"  - Fornecedor: {fornecedor}, Quantidade de contratos: {quantidade}")
+print("CONT: ", cont)
