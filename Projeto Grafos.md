@@ -31,6 +31,3 @@ Indica um contrato entre uma empresa e um orgão.
 ## Pesos das arestas
 
 Valor do contrato em reais.
-
-# Código
-
