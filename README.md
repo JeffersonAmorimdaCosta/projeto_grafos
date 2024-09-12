@@ -1,0 +1,2 @@
+# Análise de Contratos entre Ministérios e Empresas
+Este projeto, desenvolvido para a conclusão da cadeira de Teoria dos Grafos, analisa contratos firmados entre ministérios e empresas do governo federal, utilizando um grafo para representar as conexões. A análise busca identificar padrões de recorrência nos contratos e destacar as empresas e ministérios com mais relações, fornecendo uma melhor compreensão sobre a distribuição e concentração dos contratos governamentais.
